@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function arraydemo() {
+            const a = [];			// an empty array
+            a[0] = 3;				// initializing value 3 at index 0	
+            console.log(a[0]);		// accessing index 0, which prints 3	
+            a[1] = a[0] - 3;		// a[1] now contains the value 0	
+            console.log(a[a[1]]);	// a[1] returns 0, which accesses a[0] and print 3	
+            console.log(a[10]);
+
+
+            const objArray = [{ key1: "value1" }, { key2: "value2" }];
+            // ArrayName[array_index][object_key]	
+            console.log(objArray[0]["key1"]);	// value1
+
+            const multiArray = [
+                [{ key1: "value1", key2: "value2" },
+                { key1: "value3", key2: "value4" }],
+                [{ key1: "value5", key2: "value6" },
+                { key1: "value7", key2: "value8" }]
+            ];
+            // ArrayName[array_index][internal_array_index][object_key]	
+            console.log(multiArray[1][0]["key2"]);	// value6
+            const b = [1, 2, 3];		// a new array with three elements
+            const x = b.join();		// “1,2,3”
+            console.log(x);
+            const y = b.join(" ");		// “1 2 3”
+            console.log(y);
+            const z = b.join("");
+            console.log(z);
+            const c = x.split(",");
+            console.log(c);
+            let d = ["banana", "cherry", "apple"];
+            d.sort();
+            const s = d.join(" is good, ");
+            console.log(s);		// apple is good, banana is good, cherry
+            let fruits = ["banana", "orange", "apple", "mango"];
+            fruits.sort();
+            console.log(fruits);	// [“Apple”, “Banana”, “Mango”, “Orange”]
+        }
+    </script>
+</head>
+
+<body onload="arraydemo()">
+    <h1>Check the console</h1>
+</body>
+
+</html>

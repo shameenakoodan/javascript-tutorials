@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lower</title>
+    <script>
+        function upsidedowntrapezoid() {
+            width = prompt("Enter the width of the trapezoid");
+            height = prompt("Enter the height of the trapezoid");
+            spaces = 0;
+            stars = width;
+            for (let h = 2; h < height; h++) {
+                for (let i = 0; i < spaces; i++) {
+                    document.write("&nbsp;");
+                }
+                for (let j = 0; j < stars; j++) {
+                    document.write("*");
+                }
+                spaces += 1;
+                stars -= 2;
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Click to display trapezoid " onclick="upsidedowntrapezoid()">
+</body>
+
+</html>

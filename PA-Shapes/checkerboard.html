@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <script>
+        function printCheckerBoard() {
+            width = prompt("Enter width");
+            height = prompt("Enter height");
+            for (let row = 0; row < height; row++) {
+                let result="";
+                for (let col =0; col < width; col++) {
+                    if(col == 0 && row%2 !=0)
+                        result+="&nbsp;";
+                    else if(row%2!=0 && col == width-1)
+                        result+="&nbsp;";
+                    else if(col%2 == 0)
+                        result += "&#42;";
+                    else
+                        result+= "&nbsp;";
+                }
+                result += '<br>'
+                document.write(result);
+            }
+        }
+    </script>
+</head>
+
+<body>
+<input type="button" value="Click to display Checkerboard" onclick="printCheckerBoard()">
+</body>
+
+</html>

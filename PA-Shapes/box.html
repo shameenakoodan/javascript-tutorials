@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA 308.1.2 - Practice Assignment - Printing Shapes
+    </title>
+    <script>
+        function printBox() {
+            width = prompt("Enter width");
+            height = prompt("Enter height");
+            for (let index = 0; index < height; index++) {
+                let result = "";
+                for (let index = 0; index < width; index++) {
+                    result += "&#42;";
+                }
+                result += '<br>';
+                document.write(result);
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Print Box" onclick="printBox()">
+
+</body>
+
+</html>
